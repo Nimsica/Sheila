@@ -1,0 +1,90 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Para Sheila</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: linear-gradient(to bottom right, #ffdde1, #ee9ca7);
+      color: #333;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      padding: 1rem;
+      text-align: center;
+    }
+
+    .container {
+      background-color: white;
+      padding: 2rem;
+      border-radius: 15px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      max-width: 400px;
+    }
+
+    h1 {
+      color: #e91e63;
+    }
+
+    p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+    }
+
+    button {
+      margin-top: 1.5rem;
+      background-color: #e91e63;
+      color: white;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #d81b60;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Para ti, Sheila 💖</h1>
+    <p id="texto">Hola Sheila, hoy quiero contarte por qué me enamoré de ti...</p>
+    <button onclick="siguiente()">Siguiente</button>
+  </div>
+
+  <script>
+    const textos = [
+      "Llevamos ya 4 meses juntos, y siento que mi corazón late más fuerte cada vez que pienso en ti.",
+      "En el primer mes, me cautivaste con tus ojos hermosos, tu forma de ser tan única, tu corazón dulce, y tu forma moderna de ver la vida.",
+      "Fue imposible no fijarme en ti. Me atrajiste como un imán. Tu mirada tenía algo especial, algo que me hablaba al alma.",
+      "En el segundo mes, te fui conociendo más, y entre más lo hacía, más me encantabas. Tu forma de hablar, tu voz, tu forma tan natural de hacerme sentir en casa...",
+      "Tus risas se me quedaron grabadas. Tu forma de cantar, tu mirada, tu ternura, tu pasión. Comencé a admirarte profundamente.",
+      "También conocí tu cuerpo, tus gestos, tu aroma, tu energía. Me enamoré no solo de tu belleza, sino de tu esencia.",
+      "Y en el tercer mes… wow. Vivimos nuestro primer viaje juntos. Dormimos juntos, nos abrazamos bajo cielos nuevos. Sentí que el universo estaba completo.",
+      "Ahí entendí que el amor había llegado a un punto altísimo. Me sentí el hombre más feliz del mundo, afortunado por tener a la mujer más increíble del planeta.",
+      "Sheila, me enamoré de ti porque eres diferente, porque tu luz es única. Porque me haces mejor hombre. Porque contigo, la vida tiene un sentido nuevo.",
+      "Gracias por estos cuatro meses. Por cada mirada, por cada sonrisa, por cada momento.",
+      "Y si me dejas… quiero seguir amándote mucho, muchísimo más allá de todo lo que ya vivimos. 💗"
+    ];
+
+    let index = 0;
+    function siguiente() {
+      index++;
+      if (index < textos.length) {
+        document.getElementById("texto").innerText = textos[index];
+      } else {
+        document.getElementById("texto").innerText = "Te amo, Sheila. 🌹";
+        document.querySelector("button").style.display = "none";
+      }
+    }
+  </script>
+</body>
+</html>
